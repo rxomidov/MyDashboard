@@ -1,0 +1,9 @@
+version: "2"
+services:
+  node:
+    image: "node:12.16.1-alpine3.10"
+    user: "node"
+    working_dir: /app
+    volumes:
+      - ./:/app
+    command: "npm start"

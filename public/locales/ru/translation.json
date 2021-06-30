@@ -1,0 +1,33 @@
+{
+  "name": "day.name.nameRu",
+  "description": "descriptionRu",
+  "header": {
+    "appName": "Любимая Доставка",
+    "dashboard": "Приборная панель",
+    "users": "Пользователи",
+    "settings": "Настройки"
+  },
+  "sidebar": {
+    "Article": "Статья",
+    "Orders": "Заказы",
+    "Drivers": "Водители",
+    "Users": "Пользователи",
+    "Logout": "Выйти"
+  },
+  "articles": {
+    "senderName": "Отправитель",
+    "packNames": "Отгрузка",
+    "statusName": "Статус",
+    "totalCost": "Общая стоимость",
+    "scheduledTime": "Назначенное время"
+  },
+  "drivers": {
+    "driverName": "Водитель",
+    "car": "Машина",
+    "gender": "Gender",
+    "statusName": "Пол",
+    "phoneNumber": "Телефонный номер",
+    "patronymic": "Отчество",
+    "actions": "Действия"
+  }
+}

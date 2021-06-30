@@ -1,0 +1,34 @@
+{
+  "name": "day.name.nameEn",
+  "description": "descriptionEn",
+  "header": {
+    "appName": "Sevimli Shipment",
+    "dashboard": "Dashboard",
+    "users": "Users",
+    "settings": "Settings"
+  },
+  "sidebar": {
+    "Article": "Article",
+    "Orders": "Orders",
+    "Drivers": "Drivers",
+    "Users": "Users",
+    "Logout": "Logout"
+  },
+  "articles": {
+    "senderName": "Sender",
+    "packNames": "Shipment",
+    "statusName": "Status",
+    "totalCost": "Total cost",
+    "scheduledTime": "Scheduled time",
+    "actions": "Действия"
+  },
+  "drivers": {
+    "driverName": "Driver",
+    "car": "Car",
+    "gender": "Gender",
+    "statusName": "Status",
+    "phoneNumber": "Phone Number",
+    "patronymic": "Patronymic",
+    "actions": "Actions"
+  }
+}

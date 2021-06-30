@@ -1,0 +1,36 @@
+image: docker:latest
+
+services:
+  - docker:dind
+
+before_script:
+  - apk add --update python2 py-pip git rsync sshpass openssh
+  - pip install --no-cache-dir docker-compose==1.21.1
+  - mkdir -p ~/.ssh && chmod 777 ~/.ssh
+  - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  - docker info
+  - docker-compose -v
+  - docker-compose -f docker-compose.gitlab.yml up -d
+  - docker-compose ps
+  - docker-compose run node npm -v
+  - docker-compose run node npm install
+  - docker-compose run node npm run build
+
+stages:
+  - deploy
+
+dev:
+  stage: deploy
+  only:
+    - master
+  script:
+    - echo "Deploying to server"
+#    - sshpass -p $SSH_PASS_PROD rsync -riz --links -e "ssh -o StrictHostKeyChecking=no" $SSH_DIRECTORY_LOCAL_PROD $SSH_USER_PROD@$SSH_HOST_PROD:$SSH_DIRECTORY_REMOTE_PROD
+    - echo "Deployed"
+  cache:
+    untracked: true
+    policy: pull
+
+#  only:
+#    - master
+#
